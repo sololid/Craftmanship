@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craftmanship.Core", "Craftmanship.Core\Craftmanship.Core.csproj", "{3A1AEF4D-B4F4-4642-8989-6B1330E48A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craftmanship.MVC", "Craftmanship.MVC\Craftmanship.MVC.csproj", "{8B48359E-54B3-4A7E-A1A1-787846A31FC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A1AEF4D-B4F4-4642-8989-6B1330E48A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A1AEF4D-B4F4-4642-8989-6B1330E48A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A1AEF4D-B4F4-4642-8989-6B1330E48A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A1AEF4D-B4F4-4642-8989-6B1330E48A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B48359E-54B3-4A7E-A1A1-787846A31FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B48359E-54B3-4A7E-A1A1-787846A31FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B48359E-54B3-4A7E-A1A1-787846A31FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B48359E-54B3-4A7E-A1A1-787846A31FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D83C5CD8-9CC6-44CB-B84B-1A2F25E81441}
+	EndGlobalSection
+EndGlobal

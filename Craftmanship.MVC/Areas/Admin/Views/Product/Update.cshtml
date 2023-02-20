@@ -1,0 +1,81 @@
+﻿@model Craftmanship.Core.Models.ViewModel.ProductsVM
+
+
+<form method="post" asp-action="Update" enctype="multipart/form-data">
+    <input asp-for="Product.Id" hidden />
+    <input asp-for="Product.ImageUrl" hidden />
+    <div class="row">
+        <div class="col-10">
+            <div class="border p-3 mt-4 row">
+                <div class="col-12 pb-2">
+                    <p>
+                        <h3>Skapa en ny produkt</h3>
+                    </p>
+                </div>
+                @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+                <div class="mb-3">
+                    <label asp-for="Product.Name" class="control-label"></label>
+                    <input asp-for="Product.Name" class="form-control" />
+                    <span asp-validation-for="Product.Name" class="text-bg-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Product.Description" class="control-label"></label>
+                    <textarea asp-for="Product.Description" rows="3" class="form-control"></textarea>
+                    <span asp-validation-for="Product.Description" class="text-bg-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Product.ImageUrl" class="control-label"></label>
+                    <input type="file" id="uploadBox" name="file" class="form-control" />
+                    @*<span asp-validation-for="Product.ImageUrl" class="text-bg-danger"></span>*@
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label asp-for="Product.Price" class="control-label"></label>
+                    <input asp-for="Product.Price" class="form-control" />
+                    <span asp-validation-for="Product.Price" class="text-bg-danger"></span>
+                </div>
+
+                <div class="mb-3 col-6">
+                    <label asp-for="Product.CategoryId" class="form-label"></label>
+                    <select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-select">
+                        <option disabled selected>--Välj en kategori</option>
+                    </select>
+                    <span asp-validation-for="Product.CategoryId" class="text-bg-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Uppdatera</button>
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">Tillbaka till lista </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 pt-4">
+            <img src="@Model.Product.ImageUrl" 
+            width="100%" style="border-radius:5px; border:1px solid #bbb9b9"/>
+        </div>
+    </div>
+
+    
+</form>
+
+@section Scripts
+    {
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        function ValidateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Välj en bild till produkten!',
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
+}
